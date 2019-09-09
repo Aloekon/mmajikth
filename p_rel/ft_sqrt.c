@@ -6,20 +6,20 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:22:38 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/06 11:22:38 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/09 13:45:22 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
-    int i;
+	int i;
 
-    i = 1;
-    while (i * i <= nb)
-    {
-        if (i * i == nb)
-            return i;
-        i++;
-    }
-    return 0;
+	i = 1;
+	while (i * i <= nb)
+	{
+		if (i * i == nb)
+			return (i);
+		i++;
+	}
+	return (0);
 }

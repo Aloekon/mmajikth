@@ -6,20 +6,20 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 01:52:14 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/06 01:52:14 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/09 13:43:40 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char a);
+void	ft_putchar(char a);
 
-void ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-    char a;
+	char a;
 
-    a = 'a';
-    while(a <= 'z')
-    {
-        ft_putchar(a);
-        a++;
-    }
+	a = 'a';
+	while (a <= 'z')
+	{
+		ft_putchar(a);
+		a++;
+	}
 }

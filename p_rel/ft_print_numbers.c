@@ -6,20 +6,20 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 01:53:48 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/06 01:53:48 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/09 13:43:47 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char c);
+void	ft_putchar(char c);
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
-    char c;
+	char c;
 
-    c = '0';
-    while(c <= '9')
-    {
-        ft_putchar(c);
-        c++;
-    }
+	c = '0';
+	while (c <= '9')
+	{
+		ft_putchar(c);
+		c++;
+	}
 }

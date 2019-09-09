@@ -6,17 +6,17 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:59:07 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/06 11:59:07 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/09 13:33:51 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putchar(char c);
+void	ft_putchar(char c);
 
-void    ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    while (*str != 0)
-    {
-        ft_putchar(*str);
-        str++;
-    }
+	while (*str != 0)
+	{
+		ft_putchar(*str);
+		str++;
+	}
 }

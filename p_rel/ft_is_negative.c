@@ -6,16 +6,16 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 01:59:44 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/06 01:59:44 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/09 13:29:41 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char c);
+void	ft_putchar(char c);
 
-void ft_is_negative(int n)
+void	ft_is_negative(int n)
 {
-    if (n < 0)
-        ft_putchar('N');
-    else
-        ft_putchar('P');
+	if (n < 0)
+		ft_putchar('N');
+	else
+		ft_putchar('P');
 }
