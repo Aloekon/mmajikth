@@ -63,7 +63,7 @@ int     main(int argv, char** argc)
         return 0;
     ft_sort(argc, argv - 1);
     i = 1;
-    while (i <= argv)
+    while (i < argv)
     {
         ft_putstr(argc[i]);
         ft_putchar('\n');

@@ -12,7 +12,7 @@
 
 #include "ft_display_file.h"
 
-void    print_er(char *str)
+void	print_er(char *str)
 {
     while(*str)
     {
