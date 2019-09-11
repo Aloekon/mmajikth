@@ -6,12 +6,14 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 22:12:27 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/10 22:12:27 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/11 13:18:07 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_strclr(char *s)
 {
+	if (!s)
+		return ;
 	while (*s)
 	{
 		*s = 0;

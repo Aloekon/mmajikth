@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 21:31:20 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:40:16 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/11 14:06:02 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/11 14:11:16 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
+#include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	char	*s;
-	size_t	i;
+	int		i;
 
-	if (size + 1 == 0)
-		return (NULL);
-	if (!(s = (char *)malloc(size + 1)))
-		return (NULL);
+	if (!dst || !src)
+		return (0);
 	i = 0;
-	while (i <= size)
+	while (src[i] != 0)
 	{
-		s[i] = 0;
+		dst[i] = src[i];
 		i++;
 	}
-	return (s);
+	dst[i] = src[i];
+	return (dst);
 }

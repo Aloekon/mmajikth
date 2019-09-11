@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 21:31:20 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:40:16 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/11 13:26:32 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/11 13:47:03 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*s;
-	size_t	i;
+	char	*r;
+	int		len;
+	int		i;
 
-	if (size + 1 == 0)
-		return (NULL);
-	if (!(s = (char *)malloc(size + 1)))
-		return (NULL);
+	if (!s || !f)
+		return ;
+	len = ft_strlen(s);
+	r = ft_strnew(len);
 	i = 0;
-	while (i <= size)
+	while (s[i] != 0)
 	{
-		s[i] = 0;
+		r[i] = f(s[i]);
 		i++;
 	}
-	return (s);
+	return (r);
 }

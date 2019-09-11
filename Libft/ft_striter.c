@@ -6,7 +6,7 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 22:22:21 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/10 22:22:21 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/11 13:23:52 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
+	if (!s || !f)
+		return ;
 	while (*s)
 	{
 		f(s);

@@ -6,13 +6,13 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 21:04:49 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/10 21:04:49 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/11 13:40:38 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft.h"
 
-void *	ft_memalloc(size_t size)
+void	*ft_memalloc(size_t size)
 {
 	void	*p;
 

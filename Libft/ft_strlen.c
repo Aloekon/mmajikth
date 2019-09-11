@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 21:31:20 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:40:16 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/06 12:05:58 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/09 13:46:50 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
-
-char	*ft_strnew(size_t size)
+int	ft_strlen(char *str)
 {
-	char	*s;
-	size_t	i;
+	int i;
 
-	if (size + 1 == 0)
-		return (NULL);
-	if (!(s = (char *)malloc(size + 1)))
-		return (NULL);
 	i = 0;
-	while (i <= size)
+	while (str[i] != 0)
 	{
-		s[i] = 0;
 		i++;
 	}
-	return (s);
+	return (i);
 }
