@@ -1,4 +1,8 @@
 #include "Libft.h"
+#include "ft_isalpha.c"
+#include "ft_isdigit.c"
+#include "ft_isalnum.c"
+#include "ft_isascii.c"
 #include "ft_memalloc.c"
 #include "ft_memdel.c"
 #include "ft_strnew.c"
@@ -18,7 +22,7 @@
 int	main(int argc, char **argv)
 {
 	void	*p;
-	char	*s;
+	char	s;
 	//ft_putstr_fd(argv[1], 1);
 	//ft_putstr_fd(argv[2], 1);
 
@@ -27,16 +31,8 @@ int	main(int argc, char **argv)
 
 	//ft_putnbr(-2147483648);
 
-	s = ft_strnew(20);
-	if (s && s[20] == 0)
+	s = ' ';
+	if (ft_isascii(s))
 		ft_putstr("Success!\n");
-	s[0] = '5';
-	s[1] = '1';
-	ft_strclr(s);
-	if (s[1] == 0)
-		ft_putstr("Success!\n");
-	ft_strdel(&s);
-	if (!s)
-		ft_putstr("Success!");
 	return (0);
 }
