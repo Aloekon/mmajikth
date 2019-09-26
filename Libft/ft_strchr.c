@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 22:12:27 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:18:07 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/26 19:15:27 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/26 19:15:27 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_strchr(const char *s, int c)
 {
-	if (!s)
-		return ;
 	while (*s)
 	{
-		*s = 0;
+		if (*s == c)
+			return ((char *)s);
 		s++;
 	}
+	if (c == '\0')
+		return ((char *)s);
+	return (0);
 }

@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 22:12:27 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:18:07 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/26 16:29:00 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/26 16:29:00 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	if (!s)
-		return ;
-	while (*s)
+	unsigned char	*tmp_dst;
+	unsigned char	*tmp_src;
+	size_t			i;
+
+	tmp_dst = (unsigned char*)dst;
+	tmp_src = (unsigned char*)src;
+	i = 0;
+	while (i < n)
 	{
-		*s = 0;
-		s++;
+		tmp_dst[i] = tmp_src[i];
+		if (tmp_dst[i] == (unsigned char)c)
+			return ((void*)(dst + i + 1));
+		i++;
 	}
+	return (NULL);
 }

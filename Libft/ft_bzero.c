@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 22:12:27 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:18:07 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/26 17:15:48 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/26 17:15:48 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_bzero(void *b, size_t n)
 {
-	if (!s)
-		return ;
-	while (*s)
+	unsigned char	*tmp;
+
+	tmp = (unsigned char *)b;
+	while (n > 0)
 	{
-		*s = 0;
-		s++;
+		*tmp = 0;
+		tmp++;
+		n--;
 	}
 }

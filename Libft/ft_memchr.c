@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 22:12:27 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:18:07 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/26 17:42:47 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/26 17:42:47 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (!s)
-		return ;
-	while (*s)
+	size_t			i;
+	unsigned char	*tmp;
+
+	tmp = (unsigned char *)s;
+	i = 0;
+	while (i < n)
 	{
-		*s = 0;
-		s++;
+		if (tmp[i] == (unsigned char)c)
+			return(s + i);
+		i++;
 	}
+	return (NULL);
 }

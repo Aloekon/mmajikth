@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 22:12:27 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:18:07 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/26 19:54:32 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/26 19:54:32 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	if (!s)
-		return ;
-	while (*s)
+	unsigned int pos;
+	unsigned int i;
+
+	if (*to_find == '\0')
+		return ((char *)str);
+	pos = 0;
+	while (str[pos] != '\0' && pos < len)
 	{
-		*s = 0;
-		s++;
+		if (str[pos] == to_find[0])
+		{
+			i = 1;
+			while (to_find[i] != '\0' && str[pos + i] == to_find[i] &&
+					(pos + i) < len)
+				i++;
+			if (to_find[i] == '\0')
+				return ((char *)(str + pos));
+		}
+		pos++;
 	}
+	return (NULL);
 }

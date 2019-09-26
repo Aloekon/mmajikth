@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 22:12:27 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:18:07 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/26 18:56:10 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/26 18:56:10 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+int	ft_atoi(const char *str)
 {
-	if (!s)
-		return ;
-	while (*s)
+	int	res;
+	int	sign;
+
+	sign = 1;
+	res = 0;
+	while (*str && !(*str == '+' || *str == '-' || (*str >= '0' &&
+			*str <= '9')))
+		str++;
+	if (*str == '-')
+		sign = -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str && *str >= '0' && *str <= '9')
 	{
-		*s = 0;
-		s++;
+		res = res * 10 + (*str - '0');
+		str++;
 	}
+	return (res * sign);
 }

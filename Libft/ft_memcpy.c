@@ -5,28 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/25 18:34:58 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/25 18:34:58 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/26 17:19:44 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/26 17:19:44 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*tmp_dst;
 	unsigned char	*tmp_src;
-	size_t			i;
 
 	tmp_dst = (unsigned char*)dst;
 	tmp_src = (unsigned char*)src;
-	i = 0;
-	while (i < n)
+	while (n > 0)
 	{
-		tmp_dst[i] = tmp_src[i];
-		if (tmp_dst[i] == (unsigned char)c)
-			return ((void*)(dst + i + 1));
-		++i;
+		*(tmp_dst++) = *(tmp_src++);
+		n--;
 	}
-	return (NULL);
+	return (dst);
 }
