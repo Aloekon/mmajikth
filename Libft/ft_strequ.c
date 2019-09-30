@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 13:48:19 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:55:51 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/27 14:35:48 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/27 14:35:55 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
+	if (!s1 || !s2)
+		return (s1 == s2 ? 1 : 0);
+	if (ft_strlen(s1) != ft_strlen(s2))
+		return (0);
 	while (*s1)
 	{
 		if (*s1 != *s2)

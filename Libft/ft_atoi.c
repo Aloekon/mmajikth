@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/26 18:56:10 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/26 18:56:10 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/27 14:40:45 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/27 14:40:51 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	res = 0;
-	while (*str && !(*str == '+' || *str == '-' || (*str >= '0' &&
-			*str <= '9')))
+	while (*str && (*str == ' ' || *str == '\n' || *str == '\t' ||
+			*str == '\v' || *str == '\f' || *str == '\r'))
 		str++;
 	if (*str == '-')
 		sign = -1;

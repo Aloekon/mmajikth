@@ -6,7 +6,7 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 20:06:15 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/10 20:06:15 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/27 15:49:36 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s != 0)
 	{
 		ft_putchar_fd(*s, fd);

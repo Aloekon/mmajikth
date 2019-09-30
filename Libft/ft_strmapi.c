@@ -6,7 +6,7 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 13:45:01 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 13:46:57 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/27 16:15:51 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*r;
-	int		len;
-	int		i;
+	char		*r;
+	size_t		len;
+	int			i;
 
 	if (!s || !f)
-		return ;
+		return (NULL);
 	len = ft_strlen(s);
-	r = ft_strnew(len);
+	if (!(r = ft_strnew(len)))
+		return (r);
 	i = 0;
 	while (s[i] != 0)
 	{

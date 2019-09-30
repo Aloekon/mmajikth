@@ -6,7 +6,7 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/26 21:09:45 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/26 21:09:45 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/26 23:45:30 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char		**get_strs(char *s, char c, size_t count)
 				s++;
 			if (*s)
 			{
-				if (!(str = get_str(s, c)))
+				if (!(str = cpy_str(s, c)))
 				{
 					free_all(strs, i);
 					return (NULL);
@@ -85,7 +85,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (!s || !(str = ft_strdup((char *)s)))
 		return (NULL);
-	strs = get_words(str, c, count_words(str, c));
+	strs = get_strs(str, c, count_strs(str, c));
 	free(str);
 	return (strs);
 }

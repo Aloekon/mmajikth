@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 21:45:52 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/27 15:47:31 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/27 19:14:22 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/27 19:19:11 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (!as)
-		return ;
-	free(*as);
-	*as = NULL;
+	new->next = *alst;
+	*alst = new;
 }

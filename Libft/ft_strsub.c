@@ -6,7 +6,7 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 15:00:14 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 15:07:43 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/26 23:47:19 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*res;
 	int		i;
 
-	res = strnew(len);
-	if (!res)
-		return NULL;
+	res = ft_strnew(len);
+	if (!res || !s)
+		return (NULL);
 	i = 0;
-	while (i < len)
+	while ((size_t)i < len)
 	{
 		res[i] = s[start + i];
 		i++;

@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 21:45:52 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/27 15:47:31 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/27 19:14:48 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/27 19:14:53 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (!as)
-		return ;
-	free(*as);
-	*as = NULL;
+	t_list	*ptr;
+
+	ptr = lst;
+	while (ptr)
+	{
+		f(ptr);
+		ptr = ptr->next;
+	}
 }

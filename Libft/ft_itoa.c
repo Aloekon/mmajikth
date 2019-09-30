@@ -6,17 +6,19 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/26 20:16:18 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/26 20:16:18 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/27 15:36:48 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		dig_count(int n)
+static int	dig_count(int n)
 {
 	int	res;
 
 	res = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 		res = 1;
 	while (n != 0)
@@ -27,7 +29,7 @@ int		dig_count(int n)
 	return (res);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	long long	nbr;
 	int			dig;

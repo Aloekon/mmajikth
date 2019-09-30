@@ -6,7 +6,7 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 14:11:54 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/09/11 14:16:19 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/09/27 15:43:05 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t		i;
 
-	if (!dst || !src)
-		return (0);
 	i = 0;
 	while (src[i] != 0 && i < len)
 	{
