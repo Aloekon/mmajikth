@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_display_file.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/30 16:56:06 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/11/26 17:28:01 by mmajikth         ###   ########.fr       */
+/*   Created: 2019/09/06 19:20:14 by mmajikth          #+#    #+#             */
+/*   Updated: 2019/09/11 13:08:39 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef FT_DISPLAY_FILE_H
+# define FT_DISPLAY_FILE_H
 
-# define BUFF_SIZE 32
+# define BUFF_SIZE 20
 
-# include <unistd.h>
 # include <stdlib.h>
-# include "libft/libft.h"
-
-int				get_next_line(const int fd, char **line);
+# include <unistd.h>
+# include <fcntl.h>
 
 #endif

@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "/Users/mmajikth/home_folder/p_rel"
+		},
+		{
+			"path": "/Users/mmajikth/home_folder/Libft"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.insertSpaces": false,
+		"files.insertFinalNewline": true,
+		"editor.detectIndentation": false
+	}
+}
