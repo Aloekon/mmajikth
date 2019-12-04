@@ -8,6 +8,7 @@ int			main(int argc, char **argv)
 	int		ret;
 	int 	len;
 	char	*tetr;
+	char 	**field;
 
 	ret = 0;
 	tetr = NULL;
@@ -31,7 +32,12 @@ int			main(int argc, char **argv)
 	while (i < len)
 	{
 		ft_putnbr(a[i]);
+		ft_putchar(',');
 		i++;
 	}
-return (0);
+	free(a);
+	ft_putchar('\n');
+	field = gen_field(4);
+	print_field(field);
+	return (0);
 }

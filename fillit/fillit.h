@@ -6,7 +6,7 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 15:06:57 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/12/04 14:19:13 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/12/04 15:28:34 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@
 int		get_term(int fd, char **tetr);
 int		normalize(char *tetr, int *ar);
 int		*return_arr(char *tetr, int len);
+char	**gen_field(int num);
+void	print_field(char **field);
 
 #endif
