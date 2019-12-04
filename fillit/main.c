@@ -4,9 +4,11 @@ int			main(int argc, char **argv)
 {
 	int		i;
 	int		fd;
+	int		size;
 	int		*a;
 	int		ret;
 	int 	len;
+	int 	k;
 	char	*tetr;
 	char 	**field;
 
@@ -37,7 +39,20 @@ int			main(int argc, char **argv)
 	}
 	free(a);
 	ft_putchar('\n');
-	field = gen_field(4);
+	size =  ft_minsqrt(len * 4);
+	field = gen_field(size);
+	k = 1;
+	//while (k)
+	//{
+	//	i = 0;
+	//	k = solve(field, len, i, a);
+	//	if (k)
+	//	{
+	//		free(field);
+	//		size++;
+	//		field = gen_field(size);
+	//	}	
+	//}
 	print_field(field);
 	return (0);
 }

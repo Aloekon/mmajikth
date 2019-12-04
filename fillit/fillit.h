@@ -6,7 +6,7 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 15:06:57 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/12/04 15:28:34 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/12/04 16:47:48 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ int		normalize(char *tetr, int *ar);
 int		*return_arr(char *tetr, int len);
 char	**gen_field(int num);
 void	print_field(char **field);
+int		ft_minsqrt(int num);
 
 #endif

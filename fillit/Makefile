@@ -6,7 +6,7 @@
 #    By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 13:05:50 by mmajikth          #+#    #+#              #
-#    Updated: 2019/12/04 15:29:40 by mmajikth         ###   ########.fr        #
+#    Updated: 2019/12/04 16:49:30 by mmajikth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,9 @@ INCLUDE = fillit.h
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC = main.c check_term.c iden_tetr.c field.c
+SRC = main.c check_term.c iden_tetr.c field.c solve.c
 
-OBJ = main.o check_term.o iden_tetr.o field.o
+OBJ = main.o check_term.o iden_tetr.o field.o solve.o
 
 all: $(NAME)
 
