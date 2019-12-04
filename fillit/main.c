@@ -4,7 +4,9 @@ int			main(int argc, char **argv)
 {
 	int		i;
 	int		fd;
+	int		*a;
 	int		ret;
+	int 	len;
 	char	*tetr;
 
 	ret = 0;
@@ -16,10 +18,20 @@ int			main(int argc, char **argv)
 		ret = get_term(fd, &tetr);
 		close(fd);
 	}
-	if (ret == 1)
+	len = (ft_strlen(tetr) + 1) / 21;
+	a = return_arr(tetr, len);
+	if (ret == 1 || !a)
+	{
 		ft_putstr("error\n");
+		return (0);
+	}
 	else 
 		ft_putstr("OK\n");
-	//placeholder(tetr);
+	i = 0;
+	while (i < len)
+	{
+		ft_putnbr(a[i]);
+		i++;
+	}
 return (0);
 }
