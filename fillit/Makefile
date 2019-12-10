@@ -6,7 +6,7 @@
 #    By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 13:05:50 by mmajikth          #+#    #+#              #
-#    Updated: 2019/12/04 16:49:30 by mmajikth         ###   ########.fr        #
+#    Updated: 2019/12/06 14:20:16 by mmajikth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,10 @@ $(NAME):
 		$(CC) -o $(NAME) $(OBJ) -I $(INCLUDE) -L libft/ -lft
 clean:
 		rm -rf $(OBJ)
+		make -C libft/ clean
 
 fclean: clean
 		rm -rf $(NAME)
+		make -C libft/ fclean
 
 re: fclean all

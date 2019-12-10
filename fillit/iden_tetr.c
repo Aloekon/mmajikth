@@ -6,13 +6,13 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 15:29:15 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/12/04 15:36:15 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/12/06 16:24:59 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void	check(int *ar)
+void	check_ar(int *ar)
 {
 	int i;
 	int flag;
@@ -33,39 +33,37 @@ void	check(int *ar)
 			ar[i]++;
 			i += 2;
 		}
-
 	}
 }
 
 int		normalize(char *tetr, int *ar)
 {
-	int 	i;
+	int		i;
 	int		j;
 
 	i = 0;
 	while (tetr[i] != '#')
 		i++;
-	ar[0] = i % 5;
-	ar[1] = i / 5;
+	ar[0] = i / 5;
+	ar[1] = i % 5;
 	j = 2;
 	i++;
 	while (i < 21)
 	{
 		if (tetr[i] == '#')
 		{
-			ar[j] = i % 5 - ar[0];
-			ar[j + 1] = i / 5 - ar[1];
+			ar[j] = i / 5 - ar[0];
+			ar[j + 1] = i % 5 - ar[1];
 			j += 2;
 		}
 		i++;
 	}
 	ar[0] = 0;
 	ar[1] = 0;
-	check (ar);
 	return (0);
 }
 
-int		tetcmp(char *tetr)
+int		tetcmp(char *tetr, t_fig inf)
 {
 	int		*ar;
 	int		i;
@@ -91,7 +89,7 @@ int		tetcmp(char *tetr)
 	return (-1);
 }
 
-int		*return_arr(char *tetr, int len)
+int		*return_arr(char *tetr, int len, t_fig inf)
 {
 	int		i;
 	int		j;
@@ -103,12 +101,12 @@ int		*return_arr(char *tetr, int len)
 	j = 0;
 	while (i < len)
 	{
-		res[i] = tetcmp(tetr + j);
+		res[i] = tetcmp(tetr + j, inf);
 		if (res[i] == -1)
-			{
-				free(res);
-				return (NULL);
-			}
+		{
+			free(res);
+			return (NULL);
+		}
 		j += 21;
 		i++;
 	}

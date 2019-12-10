@@ -6,11 +6,39 @@
 /*   By: mmajikth <mmajikth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 15:11:26 by mmajikth          #+#    #+#             */
-/*   Updated: 2019/12/04 15:38:04 by mmajikth         ###   ########.fr       */
+/*   Updated: 2019/12/06 15:00:16 by mmajikth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
+
+int		check_max(t_fig inf, int size, int i, int j)
+{
+	int	maxi;
+	int maxj;
+	int	minj;
+	int k;
+	int	fign;
+
+	k = 0;
+	maxi = 0;
+	maxj = 0;
+	minj = 0;
+	fign = inf.a[inf.fign];
+	while (k < 8)
+	{
+		if (k % 2 == 0 && WHOLE_TETR[fign][k] > maxi)
+			maxi = WHOLE_TETR[fign][k];
+		else if (k % 2 == 1 && WHOLE_TETR[fign][k] > maxj)
+			maxj = WHOLE_TETR[fign][k];
+		else if (k % 2 == 1 && WHOLE_TETR[fign][k] < minj)
+			minj = WHOLE_TETR[fign][k];
+		k++;
+	}
+	if (maxi + i < size && maxj + j < size && minj + j >= 0)
+		return (1);
+	return (0);
+}
 
 void	init_filed(char **field, int num)
 {
@@ -61,4 +89,17 @@ void	print_field(char **field)
 		ft_putchar('\n');
 		i++;
 	}
+}
+
+void	free_field(char **field)
+{
+	int i;
+
+	i = 0;
+	while (field[i] != NULL)
+	{
+		free(field[i]);
+		i++;
+	}
+	free(field);
 }
